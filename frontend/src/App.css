@@ -1,0 +1,151 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f6fa;
+  color: #333;
+  font-size: 14px;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+
+/* Navbar */
+nav {
+  background: #2c3e50;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .brand { color: #fff; font-size: 18px; font-weight: 700; text-decoration: none; }
+nav a { color: #ccc; text-decoration: none; margin-left: 16px; font-size: 13px; }
+nav a:hover { color: #fff; }
+nav button { background: #e74c3c; color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+
+/* Forms */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin-bottom: 16px;
+}
+.card h2 { margin-bottom: 20px; font-size: 18px; color: #2c3e50; }
+
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; margin-bottom: 4px; font-weight: 600; font-size: 13px; color: #555; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: #3498db; }
+.form-group textarea { resize: vertical; min-height: 80px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+/* Buttons */
+.btn { padding: 9px 18px; border-radius: 4px; border: none; cursor: pointer; font-size: 14px; font-weight: 600; }
+.btn-primary { background: #3498db; color: #fff; }
+.btn-primary:hover { background: #2980b9; }
+.btn-danger { background: #e74c3c; color: #fff; }
+.btn-danger:hover { background: #c0392b; }
+.btn-success { background: #27ae60; color: #fff; }
+.btn-sm { padding: 5px 12px; font-size: 12px; }
+
+/* Complaint list */
+.complaint-grid { display: grid; gap: 12px; }
+.complaint-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-left: 4px solid #3498db;
+}
+.complaint-card.High, .complaint-card.Critical { border-left-color: #e74c3c; }
+.complaint-card.Medium { border-left-color: #f39c12; }
+.complaint-card.Low { border-left-color: #27ae60; }
+.complaint-card h3 { font-size: 15px; margin-bottom: 4px; }
+.complaint-card p { font-size: 13px; color: #666; }
+.complaint-card .meta { font-size: 12px; color: #999; margin-top: 6px; }
+.complaint-card .actions { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.badge-pending { background: #ffeaa7; color: #d35400; }
+.badge-progress { background: #dfe6e9; color: #2d3436; }
+.badge-resolved { background: #d5f5e3; color: #1e8449; }
+.badge-rejected { background: #fadbd8; color: #922b21; }
+.badge-high { background: #fadbd8; color: #922b21; }
+.badge-medium { background: #fef9e7; color: #b7950b; }
+.badge-low { background: #d5f5e3; color: #1e8449; }
+.badge-critical { background: #e74c3c; color: #fff; }
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filters input, .filters select {
+  padding: 7px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+/* AI Analysis box */
+.ai-box {
+  background: #eaf4fb;
+  border: 1px solid #aed6f1;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 16px;
+}
+.ai-box h3 { font-size: 14px; color: #1a5276; margin-bottom: 10px; }
+.ai-box p { font-size: 13px; margin-bottom: 6px; color: #333; }
+.ai-box strong { color: #1a5276; }
+
+/* Auth pages */
+.auth-wrap { max-width: 420px; margin: 60px auto; }
+
+/* Dashboard stats */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+.stat-card { background: #fff; border-radius: 8px; padding: 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.stat-card .num { font-size: 28px; font-weight: 700; color: #2c3e50; }
+.stat-card .label { font-size: 12px; color: #888; margin-top: 2px; }
+
+/* Alert */
+.alert { padding: 10px 14px; border-radius: 4px; margin-bottom: 14px; font-size: 13px; }
+.alert-error { background: #fadbd8; color: #922b21; }
+.alert-success { background: #d5f5e3; color: #1e8449; }
+
+.loading { text-align: center; padding: 40px; color: #888; }
+
+select option { font-size: 14px; }
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .complaint-card { flex-direction: column; gap: 10px; }
+}
