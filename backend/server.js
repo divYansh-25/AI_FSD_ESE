@@ -9,7 +9,10 @@ const aiRoutes = require('./routes/ai');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://smart-complaint-frontend-yp1l.onrender.com',
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
