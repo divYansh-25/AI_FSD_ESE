@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://your-backend-name.onrender.com';
+axios.defaults.baseURL = 'https://smart-complaint-backend-r0jh.onrender.com';
 const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
